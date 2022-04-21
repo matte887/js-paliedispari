@@ -4,15 +4,25 @@
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 // Dichiariamo chi ha vinto.
 
-// Chiedo all'utente di scegliere pari o dispari. Poi gli chiedo un numero da 1 a 5.
+// Chiedo all'utente di scegliere pari o dispari.
+// Parallelamente trasformo l'input in minuscolo e controllo che questo sia o pari o dispari.
+// Il programma chiederà l'input finché l'utente non inserirà un valore corretto.
 let userOddOrEven;
 do {
     userOddOrEven = prompt("Pari o dispari?").toLowerCase();
 } while (userOddOrEven !== "pari" && userOddOrEven !== "dispari" );
 
+// Stampo la scelta dell'utente.
 console.log(`Hai scelto ${userOddOrEven}`);
 
-const userNumber = parseInt(prompt("Scegli un numero da 1 a 5."));
+// Poi gli chiedo un numero da 1 a 5...
+// ...e controllo che sia effettivamente un numero e un numero da 1 a 5.
+let userNumber;
+do {
+    userNumber = parseInt(prompt("Scegli un numero da 1 a 5."));
+} while (userNumber > 5 || userNumber < 1 || isNaN(userNumber));
+
+// Stampo la scelta dell'utente.
 console.log(`Hai scelto il numero ${userNumber}`);
 
 // Creo una variabile per richiamare la funzione che genera un numero random da 1 a 5.
