@@ -5,8 +5,13 @@
 // Dichiariamo chi ha vinto.
 
 // Chiedo all'utente di scegliere pari o dispari. Poi gli chiedo un numero da 1 a 5.
-const userOddOrEven = prompt("Pari o dispari?").toLowerCase();
+let userOddOrEven;
+do {
+    userOddOrEven = prompt("Pari o dispari?").toLowerCase();
+} while (userOddOrEven !== "pari" && userOddOrEven !== "dispari" );
+
 console.log(`Hai scelto ${userOddOrEven}`);
+
 const userNumber = parseInt(prompt("Scegli un numero da 1 a 5."));
 console.log(`Hai scelto il numero ${userNumber}`);
 
