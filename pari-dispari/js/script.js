@@ -5,7 +5,7 @@
 // Dichiariamo chi ha vinto.
 
 // Chiedo all'utente di scegliere pari o dispari. Poi gli chiedo un numero da 1 a 5.
-const userOddOrEven = prompt("Pari o dispari?");
+const userOddOrEven = prompt("Pari o dispari?").toLowerCase();
 console.log(`Hai scelto ${userOddOrEven}`);
 const userNumber = parseInt(prompt("Scegli un numero da 1 a 5."));
 console.log(`Hai scelto il numero ${userNumber}`);
@@ -46,9 +46,9 @@ function randomNumber () {
 function oddOrEven(sum) {
     let result;
     if (sum % 2 === 0) {
-        result = "Pari";
+        result = "pari";
     } else {
-        result = "Dispari";
+        result = "dispari";
     }
     return result;
 }
