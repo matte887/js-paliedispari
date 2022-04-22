@@ -9,27 +9,34 @@ console.log(`La parole inserita è "${userWord}"`);
 const palindromResult = isThisAPalindrom(userWord);
 console.log(palindromResult);
 
+// Risultato
+if (palindromResult) {
+    console.log(`La parola "${userWord}" è palindroma.`);
+} else {
+    console.log(`La parola "${userWord}" non è palindroma.`);
+}
+
 // FUNZIONE
 /**
  * Descrizione: la funzione analizza una parola e dichiara se è un palindromo o no.
  * @param {string} userWord -> è la parola inserita dall'utente.
- * @returns {string} -> la parola userWord è/non è un palindromo.
+ * @returns {Boolean} -> restituirà vero o falso.
  */
-function isThisAPalindrom(userWord) {
+function isThisAPalindrom(stringToCheck) {
     // Trasformo la parola dell'utente, nella parola speculare.
     let invUserWord = "";
 
-    for (let i = userWord.length - 1; i >= 0; i--) {
-        invUserWord += userWord[i];
-        console.log(`La lettera ${[i + 1]} è ${userWord[i]}`);    
+    for (let i = stringToCheck.length - 1; i >= 0; i--) {
+        invUserWord += stringToCheck[i];
+        console.log(`La lettera ${[i + 1]} è ${stringToCheck[i]}`);    
     }
 
     // Stampo il risultato
     console.log(`La parola invertita è "${invUserWord}"`);
 
-    if (userWord === invUserWord) {
-        return (`"${userWord}" è un palindromo!`);
-    } else {
-        return (`"${userWord}" non è un palindromo...`);
+    let isPalindrom = false;
+    if (stringToCheck === invUserWord) {
+        isPalindrom = true;
     }
+    return isPalindrom;
 }
