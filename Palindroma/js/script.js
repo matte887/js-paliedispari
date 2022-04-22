@@ -6,11 +6,11 @@ const userWord = prompt("Inserisci una parola");
 console.log(`La parole inserita è "${userWord}"`);
 
 // Richiamo la funzione
-const palindromResult = isThisAPalindrom(userWord);
-console.log(palindromResult);
+const palindromeResult = isThisAPalindrome(userWord);
+console.log(palindromeResult);
 
 // Risultato
-if (palindromResult) {
+if (palindromeResult) {
     console.log(`La parola "${userWord}" è palindroma.`);
 } else {
     console.log(`La parola "${userWord}" non è palindroma.`);
@@ -22,7 +22,7 @@ if (palindromResult) {
  * @param {string} userWord -> è la parola inserita dall'utente.
  * @returns {Boolean} -> restituirà vero o falso.
  */
-function isThisAPalindrom(stringToCheck) {
+function isThisAPalindrome(stringToCheck) {
     // Trasformo la parola dell'utente, nella parola speculare.
     let invUserWord = "";
 
@@ -34,9 +34,9 @@ function isThisAPalindrom(stringToCheck) {
     // Stampo il risultato
     console.log(`La parola invertita è "${invUserWord}"`);
 
-    let isPalindrom = false;
+    let isPalindrome = false;
     if (stringToCheck === invUserWord) {
-        isPalindrom = true;
+        isPalindrome = true;
     }
-    return isPalindrom;
+    return isPalindrome;
 }
