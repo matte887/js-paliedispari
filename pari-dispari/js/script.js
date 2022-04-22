@@ -55,16 +55,15 @@ function randomNumber () {
 
 /**
  * Descrizione: l'input del programma è un numero. Il programma stabilisce se si tratta di un numero pari o dispari.
- * @param {number} sum
+ * @param {number} numberToCheck
  * @returns {string} Il risultato è una stringa con scritto "Pari" o "Dispari"
  */
-function oddOrEven(sum) {
+function oddOrEven(numberToCheck) {
     let result;
-    if (sum % 2 === 0) {
+    if (numberToCheck % 2 === 0) {
         result = "pari";
     } else {
         result = "dispari";
     }
     return result;
 }
-
